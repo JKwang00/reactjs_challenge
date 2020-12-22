@@ -119,7 +119,7 @@ const DetailPresenter = withRouter(({location: { pathname }, results, loading, e
                         <Divider>▪</Divider>
                         <Item>
                             {
-                                results.runtime
+                                results.runtime >= 0
                                     ? results.runtime
                                     : results.episode_run_time[0]
                             } min
