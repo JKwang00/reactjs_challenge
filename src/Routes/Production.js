@@ -18,12 +18,14 @@ const Produection = ({production, countries}) => {
                 production.map((company) => {
                     return (
                         <div key={company.id}>
-                            <p style={ {paddingBottom: '10px'} }>
+                            <div style={ {paddingBottom: '10px'} }>
+                                {company.logo_path && (
                                 <img
-                                    src={company.logo_path ? `https://image.tmdb.org/t/p/w200${company.logo_path}` : require("./assets/noPosterSmall.jpg")}
-                                    width="200px" alt={company.name}/><br/>
-                                🔳{company.name}
-                            </p>
+                                    src={`https://image.tmdb.org/t/p/w200${company.logo_path}`}
+                                    width="200px" alt={company.name} />
+                                )}
+                                <p>🔳{company.name}</p>
+                            </div>
                         </div>
                     )
                 })

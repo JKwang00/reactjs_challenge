@@ -1,5 +1,4 @@
 import React from "react";
-import { tvApi } from "../api";
 
 const Seasons = ({seasons}) => {
     return (
@@ -8,12 +7,14 @@ const Seasons = ({seasons}) => {
                 seasons.map((season, index) => {
                     return (
                         <div key={index}>
-                            <p style={ {paddingBottom: '10px'} }>
+                            <div style={ {paddingBottom: '10px'} }>
+                                {season.poster_path && (
                                 <img
-                                    src={season.poster_path ? `https://image.tmdb.org/t/p/w200${season.poster_path}` : require("./assets/noPosterSmall.jpg")}
-                                    width="200px" alt={season.name}/><br/>
-                                🔳{season.name} ({season.episode_count} episode{season.episode_count > 1 && `s`})
-                            </p>
+                                    src={`https://image.tmdb.org/t/p/w200${season.poster_path}`}
+                                    width="200px" alt={season.name} />
+                                )}
+                                <p>🔳{season.name} ({season.episode_count} episode{season.episode_count > 1 && `s`})</p>
+                            </div>
                         </div>
                     )
                 })
