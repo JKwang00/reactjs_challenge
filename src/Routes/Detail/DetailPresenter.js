@@ -134,7 +134,7 @@ const DetailPresenter = withRouter(({location: { pathname }, results, loading, e
                             }
                         </Item>
 
-                        { isMovie && (
+                        { results.imdb_id && (
                         <>
                             <Divider>▪</Divider>
                             <Item>
