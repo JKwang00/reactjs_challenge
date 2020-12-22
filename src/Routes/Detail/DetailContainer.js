@@ -2,7 +2,7 @@ import React from 'react';
 import DetailPresenter from "./DetailPresenter";
 import { moviesApi, tvApi } from "../../api";
 
-export default class extends React.Component {
+class DetailContainer extends React.Component {
     constructor(props) {
         super(props);
         const {location: {pathname}} = props;
@@ -36,7 +36,7 @@ export default class extends React.Component {
                 results = await tvApi.showDetail(parsedId);
             }
             results = results.data;
-            
+
         }catch{
             this.setState({
                 error: "Can't find anything"
@@ -50,7 +50,7 @@ export default class extends React.Component {
 
 
     }
- 
+
     render() {
         const { results, error, loading, isMovie, pathname } = this.state;
         return (
@@ -64,3 +64,4 @@ export default class extends React.Component {
         )
     }
 }
+export default DetailContainer;

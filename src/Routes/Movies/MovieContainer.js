@@ -2,7 +2,7 @@ import React from 'react';
 import MoviePresenter from "./MoviePresenter";
 import { moviesApi } from "../../api";
 
-export default class extends React.Component {
+export default class MovieContainer extends React.Component {
     state = {
         nowPlaying: null,
         upcomming: null,

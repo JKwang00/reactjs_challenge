@@ -6,7 +6,7 @@ import TV from '../Routes/TV';
 import Search from '../Routes/Search';
 import Detail from "../Routes/Detail"
 
-export default () => (
+const RouterContainer = () => (
     <Router>
         <Header />
         <Switch>
@@ -18,4 +18,6 @@ export default () => (
             <Redirect from="*" to="/" />
         </Switch>
     </Router>
-);
+)
+
+export default RouterContainer;
