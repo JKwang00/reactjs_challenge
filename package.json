@@ -1,7 +1,8 @@
 {
-  "name": "nomflix",
+  "name": "movieflix",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://localhost:3000",
   "dependencies": {
     "axios": "0.18.1",
     "react": "^16.10.2",
