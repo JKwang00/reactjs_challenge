@@ -1,10 +1,10 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
-import Header from 'Components/Header';
-import Movies from 'Routes/Movies';
-import TV from 'Routes/TV';
-import Search from 'Routes/Search';
-import Detail from 'Routes/Detail';
+import Header from './Header';
+import Movies from '../Routes/Movies';
+import TV from '../Routes/TV';
+import Search from '../Routes/Search';
+import Detail from "../Routes/Detail"
 
 export default () => (
     <Router>

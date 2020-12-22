@@ -20,7 +20,7 @@ const Produection = ({production, countries}) => {
                         <div key={company.id}>
                             <p style={ {paddingBottom: '10px'} }>
                                 <img
-                                    src={company.logo_path ? `https://image.tmdb.org/t/p/w200${company.logo_path}` : require("../assets/noPosterSmall.jpg")}
+                                    src={company.logo_path ? `https://image.tmdb.org/t/p/w200${company.logo_path}` : require("./assets/noPosterSmall.jpg")}
                                     width="200px" alt={company.name}/><br/>
                                 🔳{company.name}
                             </p>
